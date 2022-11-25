@@ -6,7 +6,7 @@ import sys
 if __name__ == '__main__':
     option = str(input("Введите \"Ввести слова\" или \"Пример\": "))
     if option == "Пример" or option == "пример":
-        words = ["Программа", "Непредвиденный", "Тттесссст"]
+        words = ["Программа", "Непредвиденный", "Абвгд"]
         print(' '.join(words))
     else:
         print("Введите три слова:")
@@ -19,9 +19,10 @@ if __name__ == '__main__':
                     file=sys.stderr
                 )
                 exit(1)
+
     print("Неповторяющиеся буквы в словах: ")
-    for z in range(3):
-        word = words[z].lower()
+    for z, item in enumerate(words):
+        word = item.lower()
         # Список повторяющихся букв
         repeat = []
         # Слово в список для проверки побуквенно
@@ -31,6 +32,7 @@ if __name__ == '__main__':
             if word.count(word[i]) > 1:
                 repeat.append(word[i])
         if len(repeat) <= 0:
-            print("Неповторяющихся букв в этом слове нет!")
+            print("Повторяющихся букв в этом слове нет!")
         else:
+            # Вычитанием множеств избавляемся от повторяющихся букв
             print(''.join(set(word_lst) - set(repeat)))
