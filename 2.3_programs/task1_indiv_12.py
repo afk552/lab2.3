@@ -5,8 +5,8 @@ import sys
 
 if __name__ == '__main__':
     sent = str(input(
-        "Введите одно предложение с \"нн\" или \"Example\" \n"))
-    if sent == "Example":
+        "Введите одно предложение с \"нн\" или \"Example\" \n")).lower()
+    if sent == "example":
         sent = "Запомните представленные исключения: " \
                "стеклянный, оловянный, деревянный!"
         print(sent)

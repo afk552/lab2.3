@@ -4,8 +4,8 @@
 import sys
 
 if __name__ == '__main__':
-    option = str(input("Введите \"Ввести слова\" или \"Пример\": "))
-    if option == "Пример" or option == "пример":
+    option = str(input("Введите \"Ввести слова\" или \"Пример\": ")).lower()
+    if option == "пример":
         words = ["Программа", "Непредвиденный", "Абвгд"]
         print(' '.join(words))
     else:
