@@ -7,11 +7,11 @@ if __name__ == '__main__':
     sent = str(input(
         "Введите одно предложение с одной или двумя запятыми "
         "или \"Example1\" / \"Example2\": \n")).lower()
-    if sent == "example1":
+    if sent.lower() == "example1":
         sent = "Тестовое предложение, слова после первой запятой, " \
                "слова после второй запятой."
         print(sent)
-    elif sent == "example2":
+    elif sent.lower() == "example2":
         sent = "Тестовое предложение, эти символы должны быть выведены."
         print(sent)
 

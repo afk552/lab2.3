@@ -4,8 +4,8 @@
 import sys
 
 if __name__ == '__main__':
-    option = str(input("Введите \"Ввести слова\" или \"Пример\": ")).lower()
-    if option == "пример":
+    option = str(input("Введите \"Ввести слова\" или \"Пример\": "))
+    if option.lower() == "пример":
         words = ["Программа", "Непредвиденный", "Абвгд"]
         print(' '.join(words))
     else:
@@ -27,10 +27,9 @@ if __name__ == '__main__':
         repeat = []
         # Слово в список для проверки побуквенно
         word_lst = list(word)
-        for i in range(len(word)):
-            # Если в слове буква повторяется, заносим в список повторений
+        for i, item2 in enumerate(word):
             if word.count(word[i]) > 1:
-                repeat.append(word[i])
+                repeat.append(item2)
         if len(repeat) <= 0:
             print("Повторяющихся букв в этом слове нет!")
         else:
