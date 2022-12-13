@@ -25,7 +25,7 @@ if __name__ == '__main__':
             print(sent[pos1 + 1:pos2])
         # Если только одна запятая
         else:
-            print(sent[pos1:len(sent)])
+            print(sent[pos1+1:len(sent)])
     else:
         print(
             "В введенном предложении нет запятых!",
