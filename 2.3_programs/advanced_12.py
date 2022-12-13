@@ -21,7 +21,7 @@ if __name__ == '__main__':
                 exit(1)
 
     print("Неповторяющиеся буквы в словах: ")
-    for z, item in enumerate(words):
+    for item in words:
         word = item.lower()
         # Список повторяющихся букв
         repeat = []
