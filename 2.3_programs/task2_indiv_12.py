@@ -4,12 +4,12 @@
 import sys
 
 if __name__ == '__main__':
-    sent = str(input(
+    sent = input(
         "Введите одно предложение с одной или двумя запятыми "
-        "или \"Example1\" / \"Example2\": \n")).lower()
+        "или \"Example1\" / \"Example2\": \n").lower()
     if sent.lower() == "example1":
-        sent = "Тестовое предложение, слова после первой запятой, " \
-               "слова после второй запятой."
+        sent = ("Тестовое предложение, слова после первой запятой, "
+                "слова после второй запятой.")
         print(sent)
     elif sent.lower() == "example2":
         sent = "Тестовое предложение, эти символы должны быть выведены."
@@ -25,7 +25,7 @@ if __name__ == '__main__':
             print(sent[pos1 + 1:pos2])
         # Если только одна запятая
         else:
-            print(sent[pos1+1:len(sent)])
+            print(sent[pos1 + 1:len(sent)])
     else:
         print(
             "В введенном предложении нет запятых!",

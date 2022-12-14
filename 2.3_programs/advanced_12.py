@@ -4,7 +4,7 @@
 import sys
 
 if __name__ == '__main__':
-    option = str(input("Введите \"Ввести слова\" или \"Пример\": "))
+    option = input("Введите \"Ввести слова\" или \"Пример\": ")
     if option.lower() == "пример":
         words = ["Программа", "Непредвиденный", "Абвгд"]
         print(' '.join(words))
@@ -12,7 +12,7 @@ if __name__ == '__main__':
         print("Введите три слова:")
         words = []
         for i in range(3):
-            words.append(str(input()))
+            words.append(input())
             if not (words[i].isalpha()):
                 print(
                     "Слова не должны содержать цифр или пробелов!",
